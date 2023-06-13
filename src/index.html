@@ -9,11 +9,12 @@
 <body>
 <header class="flex items-center justify-between p-4 bg-gray-200">
     <div class="text-xl font-bold">Логотип</div>
-    <button class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Вхід</button>
+    <button id="loginButton" class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Вхід</button>
+    <button id="createVisitButton" class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 hidden">Создать визит</button>
 </header>
 
 <div class="p-4">
-    <form class="mb-4">
+    <form id="filterForm" class="mb-4">
         <div class="flex items-center mb-2">
             <label for="search" class="mr-2">Пошук:</label>
             <input type="text" id="search" class="px-2 py-1 border border-gray-300 rounded">
@@ -38,8 +39,28 @@
     </form>
 
     <div class="bg-white rounded shadow">
-        <div class="p-4">Список створених візитів</div>
+        <div id="visitsList" class="p-4">Список створених візитів</div>
     </div>
 </div>
+
+<!-- Модальное окно для входа -->
+<div id="loginModal" class="hidden fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50">
+    <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-xl font-bold mb-4">Вхід</h2>
+        <form id="loginForm">
+            <div class="mb-4">
+                <label for="emailInput" class="block font-semibold">Email:</label>
+                <input type="email" id="emailInput" class="w-full px-2 py-1 border border-gray-300 rounded">
+            </div>
+            <div class="mb-4">
+                <label for="passwordInput" class="block font-semibold">Пароль:</label>
+                <input type="password" id="passwordInput" class="w-full px-2 py-1 border border-gray-300 rounded">
+            </div>
+            <button type="submit" class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Увійти</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
