@@ -1,14 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
-    <link href="/output.css" rel="stylesheet">
+    <title>Візити до лікарів</title>
+    <link rel="stylesheet" href="../dist/output.css">
 </head>
 <body>
-<h1 class=" font-bold underline text-9xl">
-    Hello world!
-</h1>
+<header class="flex items-center justify-between p-4 bg-gray-200">
+    <div class="text-xl font-bold">Логотип</div>
+    <button class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Вхід</button>
+</header>
+
+<div class="p-4">
+    <form class="mb-4">
+        <div class="flex items-center mb-2">
+            <label for="search" class="mr-2">Пошук:</label>
+            <input type="text" id="search" class="px-2 py-1 border border-gray-300 rounded">
+        </div>
+        <div class="flex items-center mb-2">
+            <label for="status" class="mr-2">Статус:</label>
+            <select id="status" class="px-2 py-1 border border-gray-300 rounded">
+                <option value="">Усі</option>
+                <option value="Open">Відкриті</option>
+                <option value="Done">Виконані</option>
+            </select>
+        </div>
+        <div class="flex items-center mb-2">
+            <label for="priority" class="mr-2">Важливість:</label>
+            <select id="priority" class="px-2 py-1 border border-gray-300 rounded">
+                <option value="">Усі</option>
+                <option value="High">Висока</option>
+                <option value="Normal">Звичайна</option>
+                <option value="Low">Низька</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="bg-white rounded shadow">
+        <div class="p-4">Список створених візитів</div>
+    </div>
+</div>
 </body>
 </html>
